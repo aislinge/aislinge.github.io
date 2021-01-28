@@ -1,0 +1,174 @@
+.markdown {
+  width: 70%;
+  margin: 0 auto;
+  padding-top: 10px;
+}
+
+.markdown h1,
+h2,
+h3 {
+  margin: 2rem 0;
+  font-family: "SCM", "NFM";
+}
+
+.markdown h1 {
+  font-size: 2rem;
+  counter-reset: section;
+  content: counter(main);
+  text-align: center;
+}
+
+.markdown h2 {
+  font-size: 1.8rem;
+  counter-reset: subsection;
+  display: block;
+}
+.markdown h2::before {
+  content: "\f0c9 " "";
+  counter-increment: section;
+  margin-right: 20px;
+  border-radius: 30px;
+  color: red;
+}
+.markdown h3 {
+  font-size: 1.5rem;
+}
+.markdown h3::before {
+  /*content: counter(section) "." counter(subsection) " ";*/
+  content:  counter(subsection) ".";
+  margin-right: 10px;
+  counter-increment: subsection;
+}
+h4,h5,h6{
+  margin: 2rem 0;
+  font-family: "SCM", "NFM";
+}
+
+
+
+.markdown a::before {
+  content: "\f0a9";
+  color: #0d6efd;
+  font-family: "SCR", "NFR";
+  padding-right: 10px;
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+.markdown a {
+  color: #0d6efd;
+  text-decoration: none;
+}
+
+.markdown a:hover {
+  text-decoration: underline;
+}
+
+
+
+.markdown ol,ul {
+  padding-left: 0;
+  margin-left: 1.5em;
+}
+
+.markdown ol li, ul li {
+  text-align: -webkit-match-parent;
+}
+
+.markdown li p {
+  margin: 0.5em 0 0.5em;
+}
+
+.markdown ol ol,
+ol ul,
+ul ul,
+ul ol {
+  padding-left: 1.5em;
+}
+ul > li {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+ol > li {
+  list-style-type: decimal;
+  list-style-position: inside;
+}
+
+ul,ol ~ p {
+  padding-left: 3em;
+}
+
+p > code {
+  margin: 10px 0;
+}
+
+
+
+.markdown img {
+  border: none;
+  display: block;
+  max-width: 70%;
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+.markdown p,
+a,
+li {
+  font-family:"NFR","SCR";
+}
+
+#back_btn_top {
+  background: red;
+  margin-top: 30px;
+  width: 100px;
+  text-align: center;
+  display: block;
+  border-radius: 30px;
+  cursor: pointer;
+  color: #fff;
+}
+#back_btn_top:hover {
+  cursor: pointer;
+}
+#back_btn_top > .nf {
+  margin-right: 10px;
+}
+#back_btn_bottom {
+  margin-top: 30px;
+  background: red;
+  width: 100px;
+  text-align: center;
+  display: block;
+  border-radius: 30px;
+  color: #fff;
+  cursor: pointer;
+}
+#back_btn_bottom:hover {
+  cursor: pointer;
+}
+#back_btn_bottom > .nf {
+  margin-right: 10px;
+}
+
+.toc ul,ol,li{
+  list-style: none;
+}
+
+.codehilite{
+  border: none;
+  border-radius: 5px;
+  padding: 10px 10px;
+  margin: 20px auto;
+}
+
+.codehilite > pre {
+  background: none;
+  padding: 10px 10px;
+  border-radius: 5px;
+  border: none;
+  font-family: "NFM","SCM";
+}
+.codehilite > pre > code > span {
+  font-family: "NFM","SCM";
+}
