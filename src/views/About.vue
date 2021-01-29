@@ -33,6 +33,8 @@ export default {
   text-indent: 0;
 }
 .container >>> p {
+  font-family: "YRDM";
+  font-size: 1.2em;
   text-indent: 2em;
   line-height: 2em;
 }
