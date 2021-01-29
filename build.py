@@ -1,7 +1,7 @@
 # @Author: Liona Maskros <lionacc@163.com>
 # @Date: 2021-01-27 12:20:33
 # @Last Modified by: Liona Maskros <lionacc@163.com>
-# @Last Modified time: 2021-01-27 22:46:04
+# @Last Modified time: 2021-01-29 01:01:23
 
 import markdown
 from rich.console import Console
@@ -22,9 +22,7 @@ class Make_date(object):
     def __init__(
         self,
         markdown_store_dir,
-        store_path,
         repos_api,
-        about_md_file="About.md",
     ):
         """
         Args:
@@ -34,13 +32,13 @@ class Make_date(object):
             about_md_file (str): the about me markdown file name
         """
 
-        self.store_path = store_path
+        self.store_path = "src/assets/data/"
         self.repos_api = repos_api
         self.markdown_store_dir = markdown_store_dir
-        self.about_md_file = markdown_store_dir + about_md_file
-        self.about_json_file_path = store_path + "about.json"
-        self.blog_all_list_json_file_path = store_path + "blog_all_list.json"
-        self.repos_list_json_file_path = store_path + "repos_list.json"
+        self.about_md_file = markdown_store_dir + "About.md"
+        self.about_json_file_path = self.store_path + "about.json"
+        self.blog_all_list_json_file_path = self.store_path + "blog_all_list.json"
+        self.repos_list_json_file_path = self.store_path + "repos_list.json"
 
         self.blog_all_list_data = {}  #
         self.blog_alt_path_list = []
@@ -70,7 +68,7 @@ class Make_date(object):
                 if file_name != ".DS_Store":
                     md_file_path = os.path.join(path, file_name)
                     self.md2json(md_file_path,
-                                 self.blog_all_list_json_file_path, False)
+                                 self.blog_all_list_json_file_path)
                 else:
                     pass
         # self.console.log(data)
@@ -125,6 +123,7 @@ class Make_date(object):
             data[alt_path] = tmp_data
             # self.console.log(md.toc_tokens)
         data = json.dumps(data, ensure_ascii=False)
+        self.console.log(data)
         self.blog_all_list_data = data
         with open(json_file_path, "w", encoding="utf-8") as file:
             file.write(data)
@@ -146,8 +145,8 @@ class Make_date(object):
 
 
 if __name__ == "__main__":
-    store_path = "src/assets/data/"
-    repos_api = "https://api.github.com/users/aislinge/repos"
+    github_username = "aislinge"
     markdown_store_dir = r"./docs/"
-    builder = Make_date(markdown_store_dir, store_path, repos_api)
+    repos_api = "https://api.github.com/users/" + github_username + "/repos"
+    builder = Make_date(markdown_store_dir, repos_api)
     builder.run()
