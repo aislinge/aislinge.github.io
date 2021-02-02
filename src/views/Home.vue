@@ -38,7 +38,7 @@ let start_time = moment("20201105");
 var now_time = moment();
 
 let url =
-  "https://api.lovelive.tools/api/SweetNothings/15/Serialization/Json?genderType=M";
+  "https://api.lovelive.tools/api/SweetNothings/12/Serialization/Json?genderType=M";
 
 export default {
   name: "Home",
