@@ -9,5 +9,26 @@ categories:
 publish: true
 show_comments: true
 secret_code:
----
-饮酒莫教成酩酊,看花慎勿至离披
+---。
+
+
+你好 Guest： 
+     正如你看到的一样，这个不算是一个“正常”的博客。
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     感谢朋友 Liona的支持 
