@@ -53,7 +53,7 @@ const routes = [
     }
   },
   {
-    path: "/NIXIAK",
+    path: "/Echo",
     name: "Love",
     component: Love,
     meta: {
