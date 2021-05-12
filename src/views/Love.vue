@@ -5,17 +5,15 @@
       <div class="heart right"></div>
       <div class="heart bottom"></div>
     </div>
-    <div
-      id="c"
-      onclick='window.location.href="https://aislinge.github.io/OAO/";'
-    >
-      <H2></H2>
+    <div id="c" onclick='window.location.href="https://aislinge.github.io/OAO/";'>
+     
     </div>
     <div id="l">
-      <H2></H2>
+      
     </div>
     <div id="con">
-      <h1></div>没有回音的山谷不值得纵身一跃</h1>   
+      <h1>全天下好东西都该属于我，包括你在内</h1>
+    </div>
   </div>
 </template>
 
@@ -85,15 +83,14 @@ export default {
     transform: scale(1) rotate(0deg);
   }
 }
-
 #c {
   /*right: 60%;left: 40%;*/
-  margin: -23% 30%;
+  margin: -15% 30%;
   position: absolute;
   animation: a 0.8s ease infinite normal;
 }
 #l {
-  margin: -23% 67%;
+  margin: -15% 67%;
   position: absolute;
   animation: a 0.8s ease infinite normal;
 }
@@ -101,5 +98,9 @@ export default {
   margin-top: 30px;
   margin-bottom: 100px;
   text-align: center;
+}
+h1,
+h2 {
+  font-family: "YRDM";
 }
 </style>
